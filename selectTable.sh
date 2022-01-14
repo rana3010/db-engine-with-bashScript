@@ -19,9 +19,9 @@ do
 		$val3 ) clear ; . insertTB.sh ; selectTable.sh;;
 		$val4 ) clear ; . deleteFromTB.sh; selectTable.sh;;
 		$val5 ) clear ; . deleteTB.sh ; selectTable.sh;;
-		$val6 ) clear ; . selet.sh ; selectTable.sh;;
+		$val6 ) clear ; . selectTB.sh ; selectTable.sh;;
 		$val7 ) clear ; . back.sh ; selectTable.sh;;
-		$val8 ) clear ; exit;;
+		$val8 ) echo "Goodbye :(" ; exit;;
 		* )  clear ; echo "Invalid choice!" ; selectTable.sh ; 
 	esac
 done
