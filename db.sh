@@ -1,3 +1,4 @@
+clear
 echo "Welcome to DB engine :)"
 if [ -d DB ]
 then
