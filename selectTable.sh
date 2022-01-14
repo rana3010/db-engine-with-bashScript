@@ -18,7 +18,7 @@ do
 	do
 		case $val in
 			$val1 ) clear ; . createTB.sh ; check=1 ;  break;; 
-			$val2 ) clear ; . listTB.sh ; check=1 ; break;;
+			$val2 ) clear ; . listTB.sh ; check=0 ; break;;
 			$val3 ) clear ; . insertTB.sh ; check=1 ; break;;
 			$val4 ) clear ; . deleteFromTB.sh; check=1 ; break;;
 			$val5 ) clear ; . deleteTB.sh ; check=1 ; break;;
