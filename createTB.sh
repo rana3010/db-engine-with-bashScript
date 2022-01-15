@@ -38,11 +38,11 @@ else
 			* ) echo "Invalid choice";
 		esac
 	done
-	echo "Choose the properity:"
+	echo "Choose it can be NULL or not:"
 	select prop in "NULL" "Not NULL"
 	do
 		case $prop in
-			"NULL" ) row3+=" "; break;;
+			"NULL" ) row3+=""; break;;
 			"Not NULL" ) row3+="Not NULL"; break;;
 			* ) echo "Invalid choice";
 		esac
@@ -61,10 +61,11 @@ else
 	done
 	}
 	insert
-	echo $row1
-	echo $row2
-	echo $row3
-	# echo "table $table created successfully :)"
+	echo $row1>>$table
+	echo $row2>>$table
+	echo $row3>>$table
+	echo "table $table created successfully :)"
+	echo "------------------------------------"
 	
 	
 fi
