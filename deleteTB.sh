@@ -1,6 +1,10 @@
-clear
-echo "Enter the table you want to delete it:"
+echo "Enter the table you want to delete or type (back) to go back to MENU: "
 read table
+if [  $table == "back" ]
+then
+	clear 
+	. selectTable.sh
+fi
 if [[ -f "$table" ]]
 then
 	rm -i $table
