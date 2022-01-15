@@ -11,7 +11,7 @@ then
    . selectTable.sh
 else
    echo "it's Not exists!"
-    options=("Create one" "Back To MENU" "Quit")
+    options=("Re-enter name of Database" "Create one" "Back To MENU" "Quit")
 	select val in "${options[@]}"
 	do
 		case $val in
