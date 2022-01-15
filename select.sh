@@ -1,5 +1,5 @@
 echo "~~~ MENU ~~~"
-echo "-Please Enter The Number Of Choice: "
+echo "-Please Enter The Number Of Choice:"
 options=("Create DataBase" "List" "Connect To DB" "Drop DB" "Quit")
 select val in "${options[@]}"
 do
