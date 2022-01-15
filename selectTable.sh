@@ -1,6 +1,3 @@
-# database="iti" 
-# echo "Welcome to $database database :)"
-
 echo "Please Enter number:"
 val1="To create table"
 val2="To list all tables in the db"

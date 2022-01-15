@@ -2,12 +2,13 @@ echo "Enter the name of Database you want to Connect To or enter "1" to go to ME
 read databaseName
 if [  $databaseName == "1" ]
 then
-	clear 
 	. select.sh
 fi
 if [[ -d "$databaseName" ]]
 then
    cd $databaseName
+   clear 
+   echo "Welcome to $databaseName database :)"
    . selectTable.sh
 else
    echo "it's Not exists!"

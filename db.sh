@@ -4,7 +4,8 @@ if [ -d DB ]
 then
 	cd DB
 else
-	mkdir DB	
+	mkdir DB
+	cd DB	
 fi
 . select.sh
 
