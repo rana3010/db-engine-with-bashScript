@@ -1,4 +1,4 @@
 clear
-echo "-DataBase We Have:"
+echo "DataBase We Have:"
 ls
 echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"

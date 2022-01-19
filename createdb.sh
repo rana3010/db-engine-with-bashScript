@@ -1,6 +1,6 @@
-echo "Enter the name of Database you want to Create or enter "1" to go to MENU: "
+echo "Enter the name of database you want to create or type (back) to back to MENU: "
 read databaseName
-if [  $databaseName == "1" ]
+if [  $databaseName == "back" ]
 then
 	clear 
 	. select.sh
@@ -8,27 +8,27 @@ fi
 if [[ -d "$databaseName" ]]
 then
     echo "it's already exists!"
-    options=("Create another one" "Back To MENU" "Quit")
+    options=("Create another one" "Back to MENU" "Exit")
 	select val in "${options[@]}"
 	do
 		case $val in
              "Create another one")
-            clear ; . createdb.sh ; clear ; break
+            clear ; . createdb.sh      ; break
             ;;
-			 "Back To MENU")
+			 "Back to MENU")
             clear ; . select.sh ; clear ; break
             ;;
-             "Quit")
-            clear ; exit
+             "Exit")
+            	echo "Goodbye :("   ; exit
             ;;
 			* ) echo "Invalid Choice"
 		esac
 	done
 else
   mkdir $databaseName
-  if [[ $? == 0 ]]
+  if [[ $? -eq 0 ]]
   then
-    echo "Database Created Successfully"
+    echo "Database Created Successfully :)"
   else
     echo "Error Creating Database $databaseName Please try again!"
   fi

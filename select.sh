@@ -1,6 +1,6 @@
 echo "~~~ MENU ~~~"
-echo "-Please Enter The Number Of Choice:"
-options=("Create DataBase" "List" "Connect To DB" "Drop DB" "Quit")
+echo "Please enter the number of choice:"
+options=("Create DataBase" "List" "Connect To DB" "Drop DB" "Exit")
 select val in "${options[@]}"
 do
     case $val in
@@ -16,9 +16,9 @@ do
         "Drop DB")
             clear ; . drop.sh ; . backTOmenu.sh
             ;;  
-        "Quit")
-            clear ; exit
+        "Exit")
+            echo "Goodbye :(" ; exit
             ;;
-        *) clear ; echo "invalid option $REPLY" ; . select.sh ;;
+        *) clear ; echo "invalid option" ; . select.sh ;;
     esac
 done

@@ -3,7 +3,7 @@ read table
 if [  $table == "back" ]
 then
 	clear 
-	. selectTable.sh
+	. select2.sh
 else
 	if [[ -f "$table" ]]
 	then
@@ -52,7 +52,7 @@ else
 		do
 			case $check in
 				"Yes" ) clear ; . insertTB.sh    ; clear ; break;;
-				"No" )  clear ; . selectTable.sh ; clear ; break;;
+				"No" )  clear ; . select2.sh     ; clear ; break;;
 				* ) echo "Invalid choice";
 			esac
 		done
@@ -60,12 +60,12 @@ else
 	else
 		echo "There is no table with this name!"
 		val1="Re-enter name of table"
-		val2="Go back to select table MENU"
+		val2="Back to MENU"
 		select val in "$val1" "$val2"
 		do
 			case $val in
 				$val1 ) clear ; . insertTB.sh    ; clear ; break;;
-				$val2 ) clear ; . selectTable.sh ; clear ; break;;
+				$val2 ) clear ; . select2.sh ; clear ; break;;
 				* ) echo "Invalid choice"
 			esac
 		done

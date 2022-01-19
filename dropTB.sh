@@ -3,20 +3,20 @@ read table
 if [  $table == "back" ]
 then
 	clear 
-	. selectTable.sh
+	. select2.sh
 fi
 if [[ -f "$table" ]]
 then
 	rm -i $table
 else
 	val1="Re-enter name of table"
-	val2="Go back to select table MENU"
+	val2="Back to MENU"
 	echo "There is no table with this name!"
 	select val in "$val1" "$val2"
 	do
 		case $val in
-			$val1 ) clear ; . deleteTB.sh ; clear ; break;;
-			$val2 ) clear ; . selectTable.sh ; clear ; break;;
+			$val1 ) clear ; . dropTB.sh ; clear ; break;;
+			$val2 ) clear ; . select2.sh ; clear ; break;;
 			* ) echo "Invalid choice"
 		esac
 	done
