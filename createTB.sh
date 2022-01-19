@@ -1,20 +1,20 @@
-echo "Enter the name of table you want to create or type (back) to go back to MENU: "
+echo "Enter the name of table you want to create or type (back) to back to MENU: "
 read table
 if [  $table == "back" ]
 then
 	clear 
-	. selectTable.sh
+	. select2.sh
 else
 	if [[ -f "$table" ]]
 	then
 		echo "Error: this table was created before"
 		val1="Re-enter name of new table"
-		val2="Go back to select table MENU"
+		val2="Back to MENU"
 		select val in "$val1" "$val2"
 		do
 			case $val in
 				$val1 ) clear ;    . createTB.sh ; clear ; break;;
-				$val2 ) clear ; . selectTable.sh ; clear ; break;;
+				$val2 ) clear ; . select2.sh ; clear ; break;;
 				* ) echo "Invalid choice"
 			esac
 		done
@@ -63,6 +63,6 @@ else
 		echo $row1>>$table
 		echo $row2>>$table
 		echo "table $table created successfully :)"
-		echo "------------------------------------"
+		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	fi
 fi

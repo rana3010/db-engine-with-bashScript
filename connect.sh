@@ -1,6 +1,6 @@
-echo "Enter the name of Database you want to Connect To or enter "1" to go to MENU: "
+echo "Enter the name of database you want to connect or type (back) to back to MENU: "
 read databaseName
-if [  $databaseName == "1" ]
+if [  $databaseName == "back" ]
 then
 	. select.sh
 fi
@@ -9,10 +9,10 @@ then
    cd $databaseName
    clear 
    echo "Welcome to $databaseName database :)"
-   . selectTable.sh
+   . select2.sh
 else
-   echo "it's Not exists!"
-    options=("Re-enter name of Database" "Create one" "Back To MENU" "Quit")
+   echo "It's not exists!"
+    options=("Re-enter name of Database" "Create one" "Back to MENU" "Exit")
 	select val in "${options[@]}"
 	do
 		case $val in
@@ -20,12 +20,12 @@ else
             clear ; . connect.sh ; clear ; break
             ;;
              "Create one")
-            clear ; . createdb.sh ; clear ; break
+            clear ; . createdb.sh  ; break
             ;;
-			 "Back To MENU")
+			 "Back to MENU")
             clear ; . select.sh ; clear ; break
             ;;
-             "Quit")
+             "Exit")
             clear ; exit
             ;;
 			* ) echo "Invalid Choice"
