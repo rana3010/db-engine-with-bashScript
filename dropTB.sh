@@ -8,6 +8,10 @@ fi
 if [[ -f "$table" ]]
 then
 	rm -i $table
+	if [[ ! -f $table ]]
+	then
+    	echo "Deleted!"
+	fi
 else
 	val1="Re-enter name of table"
 	val2="Back to MENU"
