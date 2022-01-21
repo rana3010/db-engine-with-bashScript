@@ -15,7 +15,7 @@ alias drop.sh="dropDB"
 alias dropTB.sh="dropTB"
 alias listdb.sh="listDB"
 alias listTB.sh="listTB"
-alias connect.sh="connectTB"
+alias connect.sh="connectDB"
 
 
 
