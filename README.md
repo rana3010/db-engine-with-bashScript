@@ -37,7 +37,7 @@ alias db.sh='DBMS'
 Then close the terminal and re-open it.
 Finally, you can use our DBMS easily.
 ## Usage
-You can run our DBMS engine from anywhere you want to include a database system by runnig this command
+You can run our DBMS engine from anywhere you want to include a database system by runnig this command :
 ```bash
 DBMS
 or
@@ -47,7 +47,7 @@ Then you can use selector app :
 
 ![Screenshot from 2022-01-21 23-39-43](https://user-images.githubusercontent.com/42323978/150604087-cc78bf7d-40b0-4391-94b4-011183f1d216.png)
 
-Or you can run any of our scripts separately:
+Or you can run any of our scripts separately :
 ```bash
 createDB
 connectDB
@@ -62,12 +62,11 @@ listDB
 ## Demo
 ## Authors
 
-- Created by [@ranawael1](https://github.com/ranawael1) & [@Nourhanibraheem](https://github.com/Nourhanibraheem) 
+- Created by [@ranawael1](https://github.com/ranawael1) & [@Nourhanibraheem](https://github.com/Nourhanibraheem).
 - feel free to contact us :blush:
 
 ## Documentations
-You can also see some documentations to understand how SQL queries work and how bash scripts run.
-
+You can also check out some documentation to understand how SQL queries work and how bash scripts work on Linux.
 
 - [MySQL](https://dev.mysql.com/doc/)
 - [PostgreSQL](https://www.postgresql.org/docs/)
