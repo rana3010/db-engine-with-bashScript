@@ -44,6 +44,7 @@ or
 db.sh
 ```
 Then you can use selector app :
+
 ![Screenshot from 2022-01-21 23-39-43](https://user-images.githubusercontent.com/42323978/150604087-cc78bf7d-40b0-4391-94b4-011183f1d216.png)
 
 Or you can run any of our scripts separately:
