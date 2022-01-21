@@ -66,7 +66,7 @@ listDB
 - feel free to contact us!
 ***
 
-## Documentation
+## Documentations
 You can also see some documentations to understand how SQL queries work and how bash scripts run.
 
 
