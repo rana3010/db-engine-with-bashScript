@@ -63,8 +63,7 @@ listDB
 ## Authors
 
 - Created by [@ranawael1](https://github.com/ranawael1) & [@Nourhanibraheem](https://github.com/Nourhanibraheem) 
-- feel free to contact us!
-***
+- feel free to contact us :blush:
 
 ## Documentations
 You can also see some documentations to understand how SQL queries work and how bash scripts run.
