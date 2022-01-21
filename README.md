@@ -58,6 +58,7 @@ selectTB
 insertTB
 dropTB
 listDB
+deleteFromTB
 ```
 ## Demo
 ## Authors
