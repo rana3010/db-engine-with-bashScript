@@ -7,8 +7,14 @@ then
 else
 	if [[ -f "$table" ]]
 	then
-		NF=$(awk -F : 'END{print NR}' $table)
-		((id = $NF - 2 )) 
+		num=$(awk -F : 'END{print $1}' $table)
+		if [[ $num == *'Not NULL'* ]]
+		then
+			id=1
+			
+		else
+			((id = $num + 1 )) 
+		fi
 		row="$id:"
 		field=$(awk -F : 'END{print NF}' $table)
 		for (( i = 2; i <= $field ; i++ )) 
