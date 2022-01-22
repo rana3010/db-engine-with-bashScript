@@ -62,6 +62,7 @@ else
 		insert
 		echo $row1>>$table
 		echo $row2>>$table
+		clear
 		echo "table $table created successfully :)"
 		echo "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
 	fi

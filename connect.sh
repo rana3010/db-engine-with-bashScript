@@ -2,6 +2,7 @@ echo "Enter the name of database you want to connect or type (back) to back to M
 read databaseName
 if [  $databaseName == "back" ]
 then
+   clear
 	. select.sh
 fi
 if [[ -d "$databaseName" ]]

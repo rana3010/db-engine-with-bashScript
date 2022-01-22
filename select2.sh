@@ -1,4 +1,4 @@
-echo "Please enter the number Of choice:"
+echo "Please enter the number of choice:"
 val1="Create table"
 val2="List all tables in the db"
 val3="Insert in a table"
