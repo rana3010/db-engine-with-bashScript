@@ -16,7 +16,6 @@ Install our project :
 
 ```bash
 git clone https://github.com/ranawael1/DBMS_with_bash.git
-cd DBMS_with_bash
 ```
 Then enter the directory and take its path :
 ```bash
