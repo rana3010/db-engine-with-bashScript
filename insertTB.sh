@@ -46,6 +46,7 @@ else
 			fi
 		done
 		echo $row>>$table
+		clear
 		echo "The record is inserted to $table successfully :)"
 		echo "Insert another record?"
 		select check in "Yes" "No"

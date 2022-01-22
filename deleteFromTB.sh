@@ -1,3 +1,19 @@
+function selectall {
+	NR=$(awk -F : 'END{print NR}' $table)
+		((NR= $NR - 2))
+		head -n1 $table > select.txt 
+		tail -n$NR $table >> select.txt
+		column -t -s ':' select.txt  > output.txt  
+		awk  '{
+			print $0;
+			if(NR==1){
+				print "-------------------------------------------------------------------------------"
+			}
+		}' output.txt
+		rm select.txt output.txt
+		echo -e "\n"
+}
+
 function deleterecord { 
 	echo "Enter the ID of the record you want to delete or type (back) to back to MENU: "
 	read id
@@ -20,7 +36,6 @@ function deleterecord {
 				esac
 			done
 		else
-
 			check=$(awk -F : 'BEGIN {pk = '$id'}{
 				if($1==pk){print $0;}
 				}' $table)
@@ -41,8 +56,8 @@ function deleterecord {
 
                if [ "$id" = "`awk -F ":" '{NF=1; print $1}' $table | grep "\b$id\b" `" ]
                 then 
-                 NR=`awk 'BEGIN{FS=":"}{if ($1=="'$id'") print NR}' $table`
-                 `sed -i ''$NR'd' $table`
+                 row=`awk 'BEGIN{FS=":"}{if ($1=="'$id'") print NR}' $table`
+                 `sed -i ''$row'd' $table`
                     echo "Record deleted successfully"
 
                 else 
@@ -62,6 +77,7 @@ then
 else
 	if  [[ -f "$table" ]]
 	then
+		selectall
 		val2="Select specific record"
 		val3="Back to MENU"
 
