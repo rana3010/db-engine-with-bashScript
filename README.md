@@ -31,7 +31,7 @@ gedit ~/.bashrc
 Then write on it :
 ```bash
 PATH="[our project directory path you take above]:$PATH"
-alias db.sh='DBMS'
+alias DBMS='db.sh'
 ```
 Then close the terminal and re-open it.
 Finally, you can use our DBMS easily.
