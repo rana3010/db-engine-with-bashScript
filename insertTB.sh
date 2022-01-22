@@ -10,7 +10,7 @@ else
 		num=$(awk -F : 'END{print $1}' $table)
 		if [[ $num == *'Not NULL'* ]]
 		then
-			id=1
+			id=0
 			
 		else
 			((id = $num + 1 )) 
